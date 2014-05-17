@@ -19,8 +19,8 @@
             // Obtem dados do profile do usuario logado
             // o app terá acesso somente os dados públicos
             $user_profile = $facebook->api('/me');
-            $user_name = $facebook->api('/me/first_name') . " " . $facebook->api('/me/last_name');
-            $user_email = $facebook->api('/me/email');
+            $user_name = $user_profile['name'];
+            $user_email = $user_profile['email'];
 
 
 
