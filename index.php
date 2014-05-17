@@ -3,17 +3,13 @@ include_once('inc/facebook.php');
 include_once('inc/mensagem.php');
 include_once('inc/header.php'); 
 ?>
-
 <div class="container page" data-pagename="inicio">
+
+    <?php include_once('user-box.php') ?>
 
     <div class="starter-template">
         <h1>Mensagens da praça</h1>
         <p class="lead">Protótipo funcional.</p>
-
-        <div class="">
-            <?php /*$mensagem = new Mensagem();*/ ?>
-            
-        </div>
     </div>
 
     <div class="row">        
@@ -26,7 +22,7 @@ include_once('inc/header.php');
                 </div>
                 <br>
                 <div class="field-group">
-                    <input name="user_nome" id="user_nome" class="form-control" type="text" placeholder="Seu nome" required />
+                    <input name="user_nome" id="user_nome" class="form-control" type="text" placeholder="Seu nome" value="<?php $user_profile['name'] ?>" required />
                     <input name="user_email" id="user_email" class="form-control" type="email" placeholder="Seu email" required />
                 </div>
                 <br>

@@ -1,9 +1,12 @@
 <?php 
+include_once('inc/facebook.php'); 
 include_once('inc/mensagem.php');
 include_once('inc/header.php'); 
 ?>
 <script src="js/vendor/isotope.pkgd.min.js"></script>
 <script src="js/vendor/masonry-horizontal.js"></script>
+
+<?php include_once('user-box.php') ?>
 
 <div id="jardim" class="container page" data-pagename="lista">
 	<div class="row">
@@ -38,25 +41,11 @@ include_once('inc/header.php');
 		// init
 		$container.isotope({
 		  	itemSelector: '.item',
-		  	/*layoutMode: 'masonry',*/
 			masonry: {
-		      /*columnWidth: 300,*/
 		      isFitWidth: true
 		    }
-		    /*cellsByRow: {
-		      columnWidth: 220,
-		      rowHeight: 220
-		    },
-		    masonryHorizontal: {
-		      rowHeight: 100
-		    },
-		    cellsByColumn: {
-		      columnWidth: 220,
-		      rowHeight: 220
-		    }*/
 		});	
-
-		 var isHorizontal = false;
+		var isHorizontal = false;
 	});
 </script>
 
