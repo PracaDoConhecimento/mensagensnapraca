@@ -1,18 +1,8 @@
 <?php 
-include_once('inc/mensagem.php');
 include_once('inc/facebook.php'); 
+include_once('inc/mensagem.php');
 include_once('inc/header.php'); 
 ?>
-
-<?php if ($user): ?>
-      <h3>You</h3>
-      <img src="https://graph.facebook.com/<?php echo $user; ?>/picture">
-
-      <h3>Your User Object (/me)</h3>
-      <pre><?php print_r($user_profile); ?></pre>
-<?php else: ?>
-      <strong><em>You are not Connected.</em></strong>
-<?php endif ?>
 
 <div class="container page" data-pagename="inicio">
 
