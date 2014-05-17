@@ -6,9 +6,11 @@ include_once('inc/header.php');
 <script src="js/vendor/isotope.pkgd.min.js"></script>
 <script src="js/vendor/masonry-horizontal.js"></script>
 
-<?php include_once('user-box.php') ?>
-
 <div id="jardim" class="container page" data-pagename="lista">
+
+	<?php include_once('user-box.php') ?>
+
+
 	<div class="row">
 		<?php
 		$count = 0;

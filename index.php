@@ -34,8 +34,8 @@ $facebook->api("/me/feed", "post", array(
                 </div>
                 <br>
                 <div class="field-group">
-                    <input name="user_nome" id="user_nome" class="form-control" type="text" placeholder="Seu nome" value="<?php $user_profile['name'] ?>" required />
-                    <input name="user_email" id="user_email" class="form-control" type="email" placeholder="Seu email" required />
+                    <input name="user_nome" id="user_nome" class="form-control" type="text" placeholder="Seu nome" value="<?php if (isset($user_name)) { echo $user_name; } ?>" required />
+                    <input name="user_email" id="user_email" class="form-control" type="email" placeholder="Seu email" value="<?php if (isset($user_email)) { echo $user_email; } ?>" required />
                 </div>
                 <br>
                 <input name="submit" id="btn_submit" type="submit" value="ENVIAR" class="btn btn-success btn-submit" />
