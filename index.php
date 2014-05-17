@@ -1,5 +1,5 @@
 <?php 
-//include_once('inc/mensagem.php');
+include_once('inc/mensagem.php');
 include_once('inc/facebook.php'); 
 include_once('inc/header.php'); 
 ?>
