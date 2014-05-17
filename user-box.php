@@ -9,9 +9,10 @@
             $permissions = $facebook->api("/me/permissions");
 
             /* verifica se o usuário já autorizou o acesso ao email para a sua aplicação */
-            if (!array_key_exists('email', $permissions['data'][0])) {
+            if (!array_key_exists('email', $permissions['data'][0]) 
+              && array_key_exists('publish_stream', $permissions['data'][0])) {
                     /* solicita permissão */
-                    header( "Location: " . $facebook->getLoginUrl(array("scope" => "email")) );
+                    header("Location: " . $facebook->getLoginUrl(array("scope" => "publish_stream,email")));
                     exit;
             }
 
@@ -21,22 +22,23 @@
 
 
             // exibe foto do usuario 
-            echo "<img class='' src='https://graph.facebook.com/$user/picture' />";
+            echo "<img class='img-thumbnail' src='https://graph.facebook.com/$user/picture' />";
 
             // printa os dados públicos do profile do usuario 
-            echo "<pre>";
+            /*echo "<pre>";
             print_r($user_profile);
-            echo "</pre>";
+            echo "</pre>";*/
 
         } catch (FacebookApiException $e) {
             // tratamento de erro
+            echo "ERRO! <br><br>";
             print_r($e);
         }
       else: 
             // usuario não logado, solicitar autenticação
             $loginUrl = $facebook->getLoginUrl();
             echo "<a href='$loginUrl'>Conectar no aplicativo</a><br />";
-            echo "<strong><em>Voc&ecirc; n&atilde;o esta conectado..</em></strong>";    
+            echo "<strong><em>Voc&ecirc; ainda n&atilde;o est&acute; conectado..</em></strong>";    
       endif;
 ?>
 </div>          

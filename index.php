@@ -2,6 +2,18 @@
 include_once('inc/facebook.php'); 
 include_once('inc/mensagem.php');
 include_once('inc/header.php'); 
+
+/*
+PRA PUBLICAR NO FACEBOOK...
+
+$facebook->api("/me/feed", "post", array(
+           'message' => "Site para desenvolvedores da linguagem PHP",
+           'name' => "Site Oficial do PHP",
+           'link' => "http://www.php.net",
+           'picture' => "http://www.exemploteste.com.br/elefante-php.png",
+));
+
+*/
 ?>
 <div class="container page" data-pagename="inicio">
 
