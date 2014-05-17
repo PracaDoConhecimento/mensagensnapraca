@@ -1,0 +1,91 @@
+/* Less */
+body {
+	padding-top: 60px;			/* for fixed topbar */
+    padding-bottom: 40px;		/* for fixed footer */
+
+	p {
+		
+	}
+}
+
+
+#jardim {
+
+	.item {
+/*		float: left;		
+		width: 300px;		*/
+		min-height: 100px;
+		margin: 10px;
+		border: 1px solid gray;
+
+    	max-width: 100%;
+    	padding: 0;
+
+    	.casulo {
+    		margin: 10px;
+    	}
+
+		.conteudo {
+			margin:10px 0;
+
+			h3 {
+				margin: 0;
+				font-size: 1.5em;
+			}
+		}
+
+		.autor {
+			margin:0 0 10px 0;
+			font-style: italic;
+		}
+		
+
+		&.w2 { 
+			width: 50%; 
+		}
+	}
+
+	/* clear fix */
+	&:after {
+	  content: '';
+	  display: block;
+	  clear: both;
+	}
+	
+}
+
+
+
+
+/* 
+* MEDIA QUERIES
+*/
+@media (max-width: 398px) {
+  #jardim .col-md-3, #jardim .col-lg-3 {
+    width: 80%;
+  }
+}
+
+@media (min-width: 568px) and (max-width: 766px) {
+  #jardim .col-md-3, #jardim .col-lg-3 {
+    width: 200px;
+  }
+}
+ 
+@media (min-width: 768px) and (max-width: 980px) {
+  #jardim .col-md-3, #jardim .col-lg-3 {
+    width: 300px;
+  }
+}
+ 
+@media (min-width: 980px) and (max-width: 1300px) {
+  #jardim .col-md-3, #jardim .col-lg-3 {
+    width: 350px;
+  }
+}
+ 
+@media (min-width: 1300px) {
+  #jardim .col-md-3, #jardim .col-lg-3 {
+    width: 400px;
+  }
+}
