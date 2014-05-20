@@ -22,15 +22,8 @@
             $user_name = $user_profile['name'];
             $user_email = $user_profile['email'];
 
-
-
             // exibe foto do usuario 
             echo "<img class='img-thumbnail' src='https://graph.facebook.com/$user/picture' />";
-
-            // printa os dados públicos do profile do usuario 
-            /*echo "<pre>";
-            print_r($user_profile);
-            echo "</pre>";*/
 
         } catch (FacebookApiException $e) {
             // tratamento de erro

@@ -1,5 +1,10 @@
 <?php 
-include_once('inc/facebook.php'); 
+/**
+ *  @todo Fazer o debug da conexão para realizar o update na base da Praça do Conhecimento remotamente.
+ **/
+
+
+//include_once('inc/facebook.php'); 
 include_once('inc/mensagem.php');
 include_once('inc/header.php'); 
 
@@ -17,7 +22,7 @@ $facebook->api("/me/feed", "post", array(
 ?>
 <div class="container page" data-pagename="inicio">
 
-    <?php include_once('user-box.php') ?>
+    <?php /*include_once('user-box.php');*/ ?>
 
     <div class="starter-template">
         <h1>Mensagens da praça</h1>
