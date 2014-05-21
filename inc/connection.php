@@ -2,18 +2,18 @@
 Class Conexao {
 
     /* HEROKU DATABASE */
-    $url=parse_url(getenv("CLEARDB_DATABASE_URL"));
+/*    $url=parse_url(getenv("CLEARDB_DATABASE_URL"));
 
     $db_host = $url["host"];
     $db_user = $url["user"];
     $db_pass = $url["pass"];
-    $dbname = substr($url["path"],1);
+    $dbname  = substr($url["path"],1);*/
 
     /* LOCALHOST */
-/*	private $db_host = 'localhost';            // servidor
+	private $db_host = 'localhost';            // servidor
 	private $db_user = 'root';                 // usuario do banco
 	private $db_pass = 'root';                 // senha do usuario do banco
-	private $dbname  = "webpraca_mensagens";   // banco de dados*/
+	private $dbname  = "webpraca_mensagens";   // banco de dados
 
 
     /* PRACA DO CONHECIMENTO */

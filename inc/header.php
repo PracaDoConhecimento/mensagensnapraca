@@ -10,6 +10,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
+    <link href='http://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
+    
     <link rel="stylesheet" href="css/bootstrap.min.css">        
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet/less" type="text/css" href="css-less/main.less" />
@@ -27,5 +29,3 @@
 <![endif]-->
 
 <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
-
-<?php include_once('inc/menu.php'); ?>
