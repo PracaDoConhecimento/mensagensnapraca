@@ -1,4 +1,4 @@
-<div class="pull-right">
+<div id="userbox" class="pull-right">
 <?php 
     // verifica se o usuário já esta logado no aplicativo
     $user = $facebook->getUser();
@@ -33,8 +33,8 @@
       else: 
             // usuario não logado, solicitar autenticação
             $loginUrl = $facebook->getLoginUrl();
-            echo "<a href='$loginUrl'>Conectar no aplicativo</a><br />";
-            echo "<strong><em>Voc&ecirc; ainda n&atilde;o est&acute; conectado..</em></strong>";    
+            echo "<strong><em>Voc&ecirc; ainda n&atilde;o est&aacute; conectado..</em></strong><br />";    
+            echo "<a href='$loginUrl'>Conectar no aplicativo</a>";            
       endif;
 ?>
 </div>          

@@ -11,7 +11,6 @@ Class Conexao {
     private $db_pass = 'RockStar9021@';                       // senha do usuario do banco
     private $dbname  = "praca803_mensagens";                  // banco de dados
 
-
 	private $con     = NULL;	
 	
     public function Conexao() {
