@@ -1,4 +1,4 @@
-<div id="userbox" class="pull-right">
+<div id="userbox" class="visible-lg visible-md">
 <?php 
     // verifica se o usuário já esta logado no aplicativo
     $user = $facebook->getUser();

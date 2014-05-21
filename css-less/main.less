@@ -1,16 +1,133 @@
 /* Less */
-body {
-	//padding-top: 60px;			/* for fixed topbar */
+@rosa: #f02e65;
+@branco: #fff;
+
+body {	
     padding-bottom: 40px;		/* for fixed footer */
 
-	p {
-		
+    background: url('../img/fundo.jpg');
+    background-size: cover;
+
+	font-family: 'Oswald', sans-serif;
+	font-weight: lighter;
+	color: @rosa;
+}
+
+h1,h2,h3,h4,h5 {
+	font-family: 'Oswald', sans-serif;
+}
+
+a {
+	color: @rosa;	
+
+	&:hover, &:focus {
+		color: saturate(@rosa, 90%)
 	}
 }
 
-#userbox {
-	text-align: right;
+.page {
+	width: 810px;
+
+	padding: 30px;	
+	margin: 20px auto 0;
 }
+
+#userbox {
+	position: absolute;
+	right: 30px;
+	top: 20px;
+	text-align: right;
+	padding: 10px;
+	background: @branco;
+	border: 1px solid #a3a3a3;
+	border-radius: 5px;
+	max-width: 140px;
+	text-align: center;
+	z-index: 10;
+}
+
+#inicio {
+	position: relative;
+	text-align: center;
+	background: rgba(201, 230, 243, 0.8);
+	border-radius: 10px;
+	padding-top: 10px;
+	padding-bottom: 70px;	
+
+	.chamada {
+		font-size: 23px;
+		font-style: italic;
+		margin: 0 auto;
+		float: none;
+		margin-bottom: 40px;
+	}
+
+	.formulario {
+		margin: 0 auto;
+		float: none;	
+
+		.field-group {
+			margin-bottom: 5px;
+		}
+
+		input[type=text], input[type=email], textarea {
+			font-weight: lighter;
+			text-align: center;
+		}
+
+		input[type=submit] {
+			background: @rosa;
+			color: @branco;
+			padding: 10px 50px;
+			font-size: 20px;
+			letter-spacing: 2px;
+			margin-top: 5px;
+
+			&:hover, &:focus {
+				background: saturate(@rosa, 90%)
+			}
+		}
+
+		.erro {
+			display: block;
+			margin-top: 10px;
+		}
+	}	
+
+	#rodape {
+		position: absolute;
+		bottom: 20px;
+		right: 30px;
+		text-align: left;
+	}
+}
+
+#sobre {
+	background: transparent url('../img/sobre-over.png') top center no-repeat;
+	padding: 190px 95px 30px;
+	height: 775px;
+
+	font-size: 16px;
+
+	#carta {		
+		.chamada {
+			text-align: center;
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 40px;			
+		}
+	}	
+
+	#balao-voltar {
+		position: absolute;
+		left: 30px;
+		top: 20px;
+		z-index: 8;
+	}
+}
+
+
+
 
 #jardim {
 
