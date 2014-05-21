@@ -1,10 +1,17 @@
 <?php 
 Class Conexao {
 				
-	private $db_host = 'localhost';        // servidor
-	private $db_user = 'praca803_addon2';  // usuario do banco
-	private $db_pass = 'RockStar9021@';    // senha do usuario do banco
-	private $dbname  = "praca803_mensagens";
+/*	private $db_host = 'localhost';            // servidor
+	private $db_user = 'root';                 // usuario do banco
+	private $db_pass = 'root';                 // senha do usuario do banco
+	private $dbname  = "webpraca_mensagens";   // banco de dados*/
+
+    private $db_host = 'pracadoconhecimento.com.br';          // servidor
+    private $db_user = 'praca803_addon2';                     // usuario do banco
+    private $db_pass = 'RockStar9021@';                       // senha do usuario do banco
+    private $dbname  = "praca803_mensagens";                  // banco de dados
+
+
 	private $con     = NULL;	
 	
     public function Conexao() {
