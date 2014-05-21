@@ -17,14 +17,14 @@ if($myconn) {
 
 	if($seldb) {
 		$conn = true;
-		return true;
+		echo true;
 	} else {
-		return false;
+		echo false;
 	}
 }
 else { // falha na conexão
 	echo ("Erro de conexão com ". $db_host .", o seguinte erro ocorreu -> ".mysql_error());
-	return false;
+	echo false;
 }
 
 //$sql = "INSERT INTO `mensagens` (`id`,`conteudo`,`autor_nome`,`autor_email`,`data_publicacao`) VALUES (NULL, '{$_msg}', '{$_nome}', '{$_email}', now());";
