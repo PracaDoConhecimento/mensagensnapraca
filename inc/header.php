@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <link href='http://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
     
     <link rel="stylesheet" href="css/bootstrap.min.css">        
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
