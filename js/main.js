@@ -28,6 +28,9 @@ $(document).ready(function() {
 				type: 'POST',
 				data: "action=cadastrar&mensagem="+user_msg+"&nome="+user_nome+"&email="+user_email,
 				success: function(htmlResponse) {
+
+					alert(htmlResponse);
+
 					if (htmlResponse == '1') {
 						limpaFormulario();						
 						$('#modalReturn').modal('show');
