@@ -25,14 +25,15 @@ $(document).ready(function() {
 		if (user_msg != "" && user_nome != "" && user_email != "") {
 			$.ajax({
 				url: 'inc/execute.php',
-				/*url: 'http://localhost/webpraca/mensagens/webservice/adicionar.php',*/
 				type: 'POST',
 				data: "action=cadastrar&mensagem="+user_msg+"&nome="+user_nome+"&email="+user_email,
 				success: function(htmlResponse) {
 					if (htmlResponse == '1') {
-						limpaFormulario();
-						window.location.href="lista.php";
-					} else {
+						limpaFormulario();						
+						$('#modalReturn').modal('show');
+						//window.location.href="lista.php";
+					} 
+					else {
 						$('#form_envia_mensagem .erro').html('Ocorreu um erro. Sua mensagem não foi publicada.');
 					}
 				}
@@ -44,8 +45,6 @@ $(document).ready(function() {
 
 		return false;
 	});
-	
-
 		
 });
 
