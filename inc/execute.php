@@ -13,7 +13,7 @@ switch ($action) {
 		$resposta = $mensagem->cadastrar($_POST['mensagem'],$_POST['nome'],$_POST['email']);
 
 		if ($resposta) {
-			echo "1";
+			echo $resposta;
 			
 			// FAz a postagem no facebook
 
