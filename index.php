@@ -40,4 +40,13 @@ include_once('inc/header.php');
 
 </div><!-- /.container -->
 
+<div id="modalReturn" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      Pronto. Sua mensagem foi enviada!<br>
+      <strong>Obrigado!</strong>
+    </div>
+  </div>
+</div>
+
 <?php include_once('inc/footer.php'); ?>
