@@ -1,3 +1,4 @@
+<?php header("Access-Control-Allow-Origin: *"); ?>    
 <?php 
 require_once('mensagem.php');
 
