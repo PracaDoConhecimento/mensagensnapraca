@@ -12,8 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"):
 			$resposta = $mensagem->cadastrar($_POST['mensagem'],$_POST['nome'],$_POST['email']);
 
 			if ($resposta) {				
-				header('content-type text/html; charset=utf-8');
-				header("Access-Control-Allow-Origin: https://limitless-ridge-8696.herokuapp.com");
+				header("Access-Control-Allow-Origin: *");
 				echo $resposta;	
 			}
 			break;
@@ -21,9 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"):
 		case 'listar':
 			$resposta = $mensagem->getListagem();
 			if ($resposta) {				
-				header('Content-type: application/json; charset=utf-8');
-				header("access-control-allow-origin: https://limitless-ridge-8696.herokuapp.com");
-				echo json_encode(array('mensagens'=> $resposta));
+				header('Content-type: application/json; charset=utf-8');				
+				header("access-control-allow-origin: *");
+				$json = json_encode(array('mensagens'=> $resposta));
+				echo isset($_GET['callback'])
+			    ? "{$_GET['callback']}($json)"
+			    : $json;
 			}
 			break;
 
@@ -31,8 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"):
 			$resposta = $mensagem->getNumTotal();
 			if ($resposta) {				
 				header('Content-type: application/json; charset=utf-8');
-				header("access-control-allow-origin: https://limitless-ridge-8696.herokuapp.com");
-				echo json_encode(array('mensagens'=> $resposta));
+				header("access-control-allow-origin: *");
+				$json = json_encode(array('mensagens'=> $resposta));
+				echo isset($_GET['callback'])
+			    ? "{$_GET['callback']}($json)"
+			    : $json;
 			}
 			break;
 
