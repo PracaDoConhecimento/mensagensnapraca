@@ -25,17 +25,12 @@ $(document).ready(function() {
 		if (user_msg != "" && user_nome != "" && user_email != "") {
 			$.ajax({
 				url: 'http://www.pracadoconhecimento.com.br/mensagens/webservice/execute.php',
-				/*url: 'inc/execute.php',*/
 				type: 'POST',
 				data: "action=cadastrar&mensagem="+user_msg+"&nome="+user_nome+"&email="+user_email,
 				success: function(htmlResponse) {
-
-					alert(htmlResponse);
-
-					if (htmlResponse == '1') {
+					if (htmlResponse == '1' || htmlResponse == 1) {
 						limpaFormulario();						
 						$('#modalReturn').modal('show');
-						//window.location.href="lista.php";
 					} 
 					else {
 						$('#form_envia_mensagem .erro').html('Ocorreu um erro. Sua mensagem não foi publicada.');
