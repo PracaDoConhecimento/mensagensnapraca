@@ -31,6 +31,14 @@ $(document).ready(function() {
 				type: 'POST',
 				data: "action=cadastrar&mensagem="+user_msg+"&nome="+user_nome+"&email="+user_email,
 				success: function(htmlResponse) {
+
+					console.log(htmlResponse);
+					console.log( toType(htmlResponse) );
+					console.log( htmlResponse == 1 );
+					console.log( htmlResponse != 1 );
+					console.log( htmlResponse == '1' );
+					console.log( htmlResponse != '1' );					
+
 					if (htmlResponse == '1' || htmlResponse == 1) {
 						limpaFormulario();						
 						$('#modalReturn').modal('show');
@@ -60,3 +68,6 @@ function limpaMsgErro() {
 	/*$('#form_envia_mensagem .erro').*/
 }
 
+var toType = function(obj) {
+  return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
+}
