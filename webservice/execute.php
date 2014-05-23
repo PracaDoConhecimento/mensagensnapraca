@@ -1,4 +1,3 @@
-<?php header("Access-Control-Allow-Origin: *"); ?>    
 <?php 
 require_once('mensagem.php');
 
@@ -20,14 +19,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"):
 		case 'listar':
 			$resposta = $mensagem->getListagem();
 			if ($resposta) {
+				header("Access-Control-Allow-Origin: *");
 				header('Content-type: application/json');
 				echo json_encode(array('mensagens'=> $resposta));
 			}
 			break;
 
 		case 'contagem':
-			$resposta = $mensagem->getListagem();
+			$resposta = $mensagem->getNumTotal();
 			if ($resposta) {
+				header("Access-Control-Allow-Origin: *");
 				header('Content-type: application/json');
 				echo json_encode(array('mensagens'=> $resposta));
 			}
