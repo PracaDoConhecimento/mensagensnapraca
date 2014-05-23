@@ -18,18 +18,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"):
 
 		case 'listar':
 			$resposta = $mensagem->getListagem();
-			if ($resposta) {
+			if ($resposta) {				
+				header('Content-type: application/json; charset=utf-8');
 				header("Access-Control-Allow-Origin: *");
-				header('Content-type: application/json');
 				echo json_encode(array('mensagens'=> $resposta));
 			}
 			break;
 
 		case 'contagem':
 			$resposta = $mensagem->getNumTotal();
-			if ($resposta) {
+			if ($resposta) {				
+				header('Content-type: application/json; charset=utf-8');
 				header("Access-Control-Allow-Origin: *");
-				header('Content-type: application/json');
 				echo json_encode(array('mensagens'=> $resposta));
 			}
 			break;
